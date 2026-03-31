@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline AI - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 60px 20px 48px;
+            border-bottom: 1px solid #e8e8ed;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+        }
+        .hero .app-name {
+            font-size: 15px;
+            font-weight: 500;
+            color: #86868b;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-size: 15px;
+            color: #aeaeb2;
+        }
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        .intro {
+            font-size: 17px;
+            color: #1d1d1f;
+            font-weight: 400;
+            line-height: 1.65;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+        }
+        .section h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+        .section p {
+            font-size: 14px;
+            color: #48484a;
+            margin-bottom: 12px;
+        }
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+        .section ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .section ul:last-child {
+            margin-bottom: 0;
+        }
+        .section li {
+            font-size: 14px;
+            color: #48484a;
+            margin-bottom: 6px;
+        }
+        .section li:last-child {
+            margin-bottom: 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+        .faq-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            font-size: 14px;
+            color: #48484a;
+            margin-bottom: 0;
+        }
+        .contact-box {
+            background-color: #1d1d1f;
+            border-radius: 16px;
+            padding: 32px 24px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .contact-box h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .contact-box p {
+            font-size: 14px;
+            color: #aeaeb2;
+            margin-bottom: 16px;
+        }
+        .contact-box a {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #48484a;
+            border-radius: 20px;
+            padding: 10px 24px;
+            transition: background-color 0.2s;
+        }
+        .contact-box a:hover {
+            background-color: #2c2c2e;
+        }
+        .footer {
+            text-align: center;
+            padding: 24px 20px 40px;
+            font-size: 12px;
+            color: #aeaeb2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #f5f5f7;
+            }
+            .hero {
+                background-color: #1c1c1e;
+                border-bottom-color: #2c2c2e;
+            }
+            .hero h1 {
+                color: #f5f5f7;
+            }
+            .hero .app-name {
+                color: #86868b;
+            }
+            .hero .tagline {
+                color: #636366;
+            }
+            .intro {
+                color: #f5f5f7;
+            }
+            .section {
+                background-color: #1c1c1e;
+            }
+            .section h2 {
+                color: #f5f5f7;
+            }
+            .section p, .section li {
+                color: #aeaeb2;
+            }
+            .faq-item h3 {
+                color: #f5f5f7;
+            }
+            .faq-item p {
+                color: #aeaeb2;
+            }
+            .contact-box {
+                background-color: #f5f5f7;
+            }
+            .contact-box h2 {
+                color: #1d1d1f;
+            }
+            .contact-box p {
+                color: #636366;
+            }
+            .contact-box a {
+                color: #1d1d1f;
+                border-color: #d1d1d6;
+            }
+            .contact-box a:hover {
+                background-color: #e8e8ed;
+            }
+            .footer {
+                color: #48484a;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 44px 16px 36px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .content {
+                padding: 28px 16px 48px;
+            }
+            .section, .contact-box {
+                padding: 22px 18px;
+                border-radius: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <p class="app-name">Offline AI</p>
+        <h1>Support</h1>
+        <p class="tagline">We're here to help</p>
+    </div>
+
+    <div class="content">
+        <p class="intro">Find answers to common questions below, or reach out to us directly if you need further assistance.</p>
+
+        <div class="section">
+            <h2>Getting Started</h2>
+            <div class="faq-item">
+                <h3>How do I start using the app?</h3>
+                <p>Just open Offline AI and start typing. No sign-up or account is required. The built-in AI model loads automatically and is ready to chat within seconds.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does the app work without internet?</h3>
+                <p>Yes. The built-in AI model runs entirely on your device and works without any internet connection. Web search and cloud AI features require internet when used.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Which devices are supported?</h3>
+                <p>Offline AI works on all iPhones and iPads running iOS 16 or later. The app automatically optimizes performance for your device, whether it's an iPhone 11 or the latest iPhone 16 Pro.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>AI Models</h2>
+            <div class="faq-item">
+                <h3>What AI model is included?</h3>
+                <p>The app includes Llama 3.2 1B Instruct, a compact language model optimized for on-device use. It handles everyday conversations, writing, brainstorming, and general questions.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use more powerful AI models?</h3>
+                <p>Yes. You can connect your own API keys from Google Gemini, OpenAI, Anthropic Claude, Groq, or any OpenAI-compatible endpoint. You can also import custom .gguf model files to run locally.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I connect a cloud API?</h3>
+                <p>Tap the AI button in the input bar, then tap "Connect API". Select your provider, enter your API key, choose a model, and tap Connect. Your key is stored locally on your device.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use self-hosted models?</h3>
+                <p>Yes. The app supports custom API endpoints. Quick presets are included for Ollama, LM Studio, and OpenRouter. You can configure any OpenAI-compatible server URL.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Features</h2>
+            <div class="faq-item">
+                <h3>How does web search work?</h3>
+                <p>Tap the network icon in the input bar to enable web search. Type your question and the app will search the web, then summarize the results using AI. Supports general search, news, location, images, and videos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I analyze images and documents?</h3>
+                <p>Yes. Tap the paperclip icon to attach an image from your photo library, take a photo with the camera, or import a PDF document. The AI will analyze and answer questions about the content.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does voice input work?</h3>
+                <p>Tap the microphone icon in the main chat to dictate messages. For longer recordings, use the Transcribe tool in the Workspace, which provides a full transcript and AI-generated summary.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Where are my conversations stored?</h3>
+                <p>All conversations are saved locally on your device. Tap the conversations icon in the top right to view, resume, or delete previous chats.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Troubleshooting</h2>
+            <div class="faq-item">
+                <h3>The AI model is not loading</h3>
+                <p>Ensure your device has sufficient free storage (at least 1 GB). Try closing and reopening the app. If the issue persists, restart your device. The model requires a moment to load on first launch.</p>
+            </div>
+            <div class="faq-item">
+                <h3>The app is slow on my older iPhone</h3>
+                <p>The app automatically uses CPU-only processing on devices with 4 GB RAM or less. Responses may be slower on older devices but will still work reliably. Closing other apps can help free up memory.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Microphone is not working</h3>
+                <p>Make sure you have granted microphone and speech recognition permissions. Go to Settings > Offline AI and enable Microphone and Speech Recognition. If you previously denied access, you must re-enable it from Settings.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Cloud API is returning errors</h3>
+                <p>Verify that your API key is correct and has not expired. Check that you have sufficient credits or quota with your provider. Ensure your device has an active internet connection.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I delete my data?</h3>
+                <p>All data is stored locally on your device. You can delete individual conversations from the conversation history. To remove all data, uninstall the app.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Privacy</h2>
+            <div class="faq-item">
+                <h3>Is my data sent to any server?</h3>
+                <p>No. When using the built-in model, everything is processed on your device. If you choose to use a cloud AI provider, your prompts are sent directly to that provider using your own API key. We never see or store any of your data.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you collect analytics?</h3>
+                <p>No. We do not collect any usage data, analytics, crash reports, or telemetry. There are no third-party SDKs or trackers in the app.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h2>Still Need Help?</h2>
+            <p>We typically respond within 24 hours.</p>
+            <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 SVR. All rights reserved.
+    </div>
+</body>
+</html>
